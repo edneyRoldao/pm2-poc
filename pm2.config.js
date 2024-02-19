@@ -3,13 +3,11 @@ module.exports = {
         {
             name: 'pm2-poc',
             script: 'dist/src/main.js',
-            watch: true,
-            ignore_watch: ['node_modules', 'logs', 'tmp'],
+            watch: false,
             instances: 1,
-            exec_mode: 'fork',
-            max_memory_restart: '200M',
+            exec_mode: 'cluster',
             env: {
-                NODE_ENV: 'production',                
+                PORT: 4200
             },
         }
     ]
