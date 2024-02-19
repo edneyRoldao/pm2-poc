@@ -1,6 +1,14 @@
 version: '3'
+
+networks:
+  redelab:
+    ipam:
+      driver: default
+
 services:
-  pm2app:
+  pm2-node-app:
     build: .
     ports:
       - "4200:4200"
+    networks:
+       redelab:

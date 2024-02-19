@@ -5,4 +5,4 @@ RUN npm install tsc -g
 RUN npm install pm2 -g
 RUN npm install
 COPY . .
-CMD ["npm", "run", "start:pm2d"]
+CMD ["npm", "run", "start:local"]
