@@ -7,6 +7,7 @@ networks:
 
 services:
   pm2-node-app:
+    container_name: pm2NodeApp
     build: .
     ports:
       - "4200:4200"
